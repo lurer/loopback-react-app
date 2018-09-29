@@ -3,11 +3,21 @@
 var loopback = require('loopback');
 var boot = require('loopback-boot');
 
+// 1. Include 'path' package
+var path = require('path');
+
 var app = module.exports = loopback();
 
-app.start = function() {
+app.start = function () {
+  // 2. Get the FQPN of the index file in client
+  var staticFolder = path.dirname(
+    path.resolve(__dirname, '..', app.get('indexFile'))
+  );
+  // 3. Set staticFolder as static in the server
+  app.use(loopback.static(staticFolder));
+  
   // start the web server
-  return app.listen(function() {
+  return app.listen(function () {
     app.emit('started');
     var baseUrl = app.get('url').replace(/\/$/, '');
     console.log('Web server listening at: %s', baseUrl);
@@ -20,7 +30,7 @@ app.start = function() {
 
 // Bootstrap the application, configure models, datasources and middleware.
 // Sub-apps like REST API are mounted via boot scripts.
-boot(app, __dirname, function(err) {
+boot(app, __dirname, function (err) {
   if (err) throw err;
 
   // start the server if `$ node server.js`

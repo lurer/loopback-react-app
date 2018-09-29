@@ -7,8 +7,11 @@
   },
   "scripts": {
     "lint": "eslint .",
+    "prestart": "npm run --prefix client build",
     "start": "node .",
-    "posttest": "npm run lint"
+    "start-dev": "concurrently \"nodemon .\" \"npm start --prefix client\"",
+    "postinstall": "npm install --prefix client",
+    "posttest": "npm run lint && nsp check"
   },
   "dependencies": {
     "compression": "^1.0.3",
@@ -18,11 +21,13 @@
     "serve-favicon": "^2.0.1",
     "strong-error-handler": "^3.0.0",
     "loopback-component-explorer": "^6.2.0",
-    "loopback": "^3.22.0"
+    "loopback": "^3.22.0",
+    "nodemon": "^1.14.11"
   },
   "devDependencies": {
     "eslint": "^3.17.1",
-    "eslint-config-loopback": "^8.0.0"
+    "eslint-config-loopback": "^8.0.0",
+    "nsp":"^3.2.1"
   },
   "repository": {
     "type": "",
