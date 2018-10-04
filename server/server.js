@@ -2,7 +2,6 @@
 
 var loopback = require('loopback');
 var boot = require('loopback-boot');
-
 // 1. Include 'path' package
 var path = require('path');
 
@@ -15,7 +14,6 @@ app.start = function () {
   );
   // 3. Set staticFolder as static in the server
   app.use(loopback.static(staticFolder));
-  
   // start the web server
   return app.listen(function () {
     app.emit('started');

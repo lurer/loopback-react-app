@@ -10,7 +10,7 @@
     "prestart": "npm run --prefix client build",
     "start": "node .",
     "start-dev": "concurrently \"nodemon .\" \"npm start --prefix client\"",
-    "postinstall": "npm install --prefix client",
+    
     "posttest": "npm run lint && nsp check"
   },
   "dependencies": {
@@ -21,7 +21,7 @@
     "loopback-boot": "^2.6.5",
     "serve-favicon": "^2.0.1",
     "strong-error-handler": "^3.0.0",
-    "loopback-component-explorer": "^6.2.0",
+    "loopback-component-explorer": "^6.3.0",
     "loopback": "^3.22.0",
     "nodemon": "^1.14.11"
   },

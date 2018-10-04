@@ -10,3 +10,7 @@ In addition to this there are also rules related to selling your house and weath
 This app will be a way of helping the user to keep track of all this.
 It will be a work in progress, and the requirements will be changed and updated as the app evolves.
 
+
+## TODO
+* Get to know Loopback modelling
+* Get to know `danazkari's` react style, as well as use of css.
