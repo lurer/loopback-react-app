@@ -1,16 +1,11 @@
-# House Rental Tax App
+# Loopback with React 
 
-The Loopback and React-Create-App setup is based on [danazkari's](https://github.com/danazkari/take-note) repo.
+This is a barebone config for using Loopback as an API endpoint and a React frontend.
 
-This app is meant for Norwegian users. Keeping track of income and expenses when renting out a house is not so difficult, but there are a lot of expenses that can be deducted on the tax return form.
+## Installation and getting started
 
-The rules around deductable expenses are not very difficult, but you need to know about them, and there are cases that are more source of debate and judgement on the owners behalf.
-In addition to this there are also rules related to selling your house and weather you will have to pay taxes on that or not. 
+* Clone repo
+* From root folder run: yarn install
+* After installation: enter /client folder and run: yarn install
+* From root folder: type npm run start-dev to start developing
 
-This app will be a way of helping the user to keep track of all this.
-It will be a work in progress, and the requirements will be changed and updated as the app evolves.
-
-
-## TODO
-* Get to know Loopback modelling
-* Get to know `danazkari's` react style, as well as use of css.
